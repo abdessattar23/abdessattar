@@ -12,6 +12,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   };
 };
+function post(){
 var name = document.querySelector('#name').value;
 var email = document.querySelector('#email').value;
 var message = document.querySelector('#message').value;
@@ -29,6 +30,8 @@ fetch("https://formsubmit.co/ajax/elyagoubiabdessattar@gmail.com", {
 })
     .then(success())
     .catch(error => error());
+};
+document.querySelector('button[type="submit"]').addEventListener('click' , post());
 function success(){
 document.querySelector('.hh1').innerText = 'Success';
 document.querySelector('.hh1').style.color = 'springgreen';
