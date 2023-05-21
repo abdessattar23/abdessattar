@@ -28,17 +28,17 @@ fetch("https://formsubmit.co/ajax/elyagoubiabdessattar@gmail.com", {
         message: message
     })
 })
-    .then(response => function(){
+    .then(response => success())
+    .catch(error => error());
+};function success(){
   document.querySelector('.hh1').innerText = 'Success';
 document.querySelector('.hh1').style.color = 'springgreen';
 document.querySelector('#pp').innerText = 'Message sent successfully. Thank you for leaving the message.';
 modal.style.display='block';
-})
-    .catch(error => function(){
+};function error(){
   document.querySelector('.hh1').innerText = 'Failed';
 document.querySelector('.hh1').style.color = 'red';
 document.querySelector('.pp').innerText = 'Failed to send the message. Please try again...';
 modal.style.display='block';
-});
-};
+}
 document.querySelector('button[type="submit"]').setAttribute('onclick', 'post()')
